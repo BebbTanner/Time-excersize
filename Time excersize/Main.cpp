@@ -8,7 +8,9 @@ recreate the whole program.
 
 This program ask the user for the current time and the time that they will be waiting for.
 It should then add those times together and tell the user the time it will be after they have 
-finished waiting. This may not be the clearest explaination.*/
+finished waiting. This may not be the clearest explaination.
+
+this is for a test commit*/
 #include <iostream>
 using namespace std;
 
