@@ -6,26 +6,25 @@ can be kicked into a function.
 In order for this to work correctly I am going to have to 
 recreate the whole program.
 
-currently, not sure what this program does.*/
+This program ask the user for the current time and the time that they will be waiting for.
+It should then add those times together and tell the user the time it will be after they have 
+finished waiting. This may not be the clearest explaination.*/
 #include <iostream>
 using namespace std;
 
 int main()
 {
 	int currentHours, currentMinutes, completionHours, completionMinutes, outputHours, outputMinutes;
-	char colon, calculateAgain;
+	char calculateAgain;
 
-	cout << "Compute completion time from current time and waiting period\n";
+		/*This will ask the user for the current time using the 24 hour notation.*/
+		cout << "Please enter the current time in the 24 hour format(HH:MM): " << endl;
+		cin >> currentHours;
+		cin >> currentMinutes;
 
-	do
-	{
-		cout << "Current time:\nEnter 24 hour time in the format HH:MM \n";
-		cin >> currentHours >> colon >> currentMinutes;
-
-		cout << "Waiting time:\nEnter 24 hour time in the format HH:MM \n";
-		cin >> outputHours >> colon >> outputMinutes;
-
-		cout << "Completion Time in 24 hour format:\n";
+		cout << "Please enter the time you are waiting(HH:MM): " << endl;
+		cin >> outputHours;
+		cin >> outputMinutes;
 
 		completionHours = currentHours + outputHours;
 		completionMinutes = currentMinutes + outputMinutes;
@@ -43,12 +42,9 @@ int main()
 			cout << "Completion Time is in the day following the start time\n";
 		}
 
-		cout << completionHours << colon << completionMinutes << endl;
-
-		cout << endl << endl << "Enter Y or y to continue, any other halts\n\n";
-		cin >> calculateAgain;
-
-	} while (calculateAgain == 'Y' || calculateAgain == 'y');
+		/*This will output the time it will be after the user has finished waiting.*/
+		cout << "The time will be: " << endl; 
+		cout << completionHours << ":" << completionMinutes << endl;
 
 	return 0;
 
